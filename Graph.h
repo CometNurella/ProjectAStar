@@ -7,6 +7,12 @@
 
 namespace astar
 {
+    struct Edge
+    {
+        NodeId to;
+        double cost;
+    };
+
     class Graph
     {
     public:
@@ -16,11 +22,7 @@ namespace astar
         virtual std::size_t getNodeCount() const noexcept = 0;
 
         [[nodiscard]]
-        virtual std::vector<NodeId>
-            getNeighbors(NodeId node) const = 0;
-
-        [[nodiscard]]
-        virtual double
-            getCost(NodeId from, NodeId to) const = 0;
+        virtual std::vector<Edge>
+            getEdges(NodeId node) const = 0;
     };
 }
