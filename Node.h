@@ -15,7 +15,7 @@ namespace astar {
 
         std::optional<NodeId> parent;
 
-        explicit Node(NodeId id)
+        Node(NodeId id)
             : id(id),
             gScore(std::numeric_limits<double>::infinity()),
             hScore(0.0),
