@@ -6,10 +6,8 @@
 #include <cstddef>
 #include <vector>
 
-namespace astar
-{
-    class Grid : public Graph
-    {
+namespace astar {
+    class Grid : public Graph {
     public:
         Grid(std::size_t width, std::size_t height);
 
