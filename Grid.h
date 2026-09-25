@@ -8,6 +8,12 @@
 
 namespace astar {
     class Grid : public Graph {
+    private:
+        std::size_t m_width;
+        std::size_t m_height;
+
+        std::vector<bool> m_walkable;
+
     public:
         Grid(std::size_t width, std::size_t height);
 
@@ -36,11 +42,5 @@ namespace astar {
 
         [[nodiscard]]
         std::size_t getHeight() const noexcept;
-
-    private:
-        std::size_t m_width;
-        std::size_t m_height;
-
-        std::vector<bool> m_walkable;
     };
 }

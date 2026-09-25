@@ -53,9 +53,7 @@ namespace astar {
             const Grid& grid,
             double straightCost = 1.0,
             double diagonalCost = std::sqrt(2.0)) {
-            return [&grid, straightCost, diagonalCost](
-                NodeId from,
-                NodeId goal) {
+            return [&grid, straightCost, diagonalCost](NodeId from, NodeId goal) {
                     const GridNode a{ grid.toGridNode(from) };
                     const GridNode b{ grid.toGridNode(goal) };
 
@@ -65,8 +63,7 @@ namespace astar {
                     const int minDelta{ std::min(dx, dy) };
                     const int maxDelta{ std::max(dx, dy) };
 
-                    return diagonalCost * minDelta
-                        + straightCost * (maxDelta - minDelta);
+                    return diagonalCost * minDelta + straightCost * (maxDelta - minDelta);
                 };
         }
     }
