@@ -13,13 +13,16 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\Core">
+    <Filter Include="Source Files\AstarCore">
+      <UniqueIdentifier>{504e7c05-0f9f-4ec4-8729-a83d47f6fef8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AstarCore\Core">
       <UniqueIdentifier>{aceb8188-965d-4f7b-9f63-94cc26365efb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Grid">
+    <Filter Include="Source Files\AstarCore\Grid">
       <UniqueIdentifier>{301a184b-9fda-45f1-bf11-7941a96554c9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Heuristics">
+    <Filter Include="Source Files\AstarCore\Heuristics">
       <UniqueIdentifier>{ffb03d07-c7e9-44a7-9db8-5f22f95c0dcc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -28,33 +31,33 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="AStar.cpp">
-      <Filter>Source Files\Core</Filter>
+      <Filter>Source Files\AstarCore\Core</Filter>
     </ClCompile>
     <ClCompile Include="Grid.cpp">
-      <Filter>Source Files\Grid</Filter>
+      <Filter>Source Files\AstarCore\Grid</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AStar.h">
-      <Filter>Source Files\Core</Filter>
+      <Filter>Source Files\AstarCore\Core</Filter>
     </ClInclude>
     <ClInclude Include="Node.h">
-      <Filter>Source Files\Core</Filter>
+      <Filter>Source Files\AstarCore\Core</Filter>
     </ClInclude>
     <ClInclude Include="Graph.h">
-      <Filter>Source Files\Core</Filter>
+      <Filter>Source Files\AstarCore\Core</Filter>
     </ClInclude>
     <ClInclude Include="Grid.h">
-      <Filter>Source Files\Grid</Filter>
+      <Filter>Source Files\AstarCore\Grid</Filter>
     </ClInclude>
     <ClInclude Include="GridNode.h">
-      <Filter>Source Files\Grid</Filter>
+      <Filter>Source Files\AstarCore\Grid</Filter>
     </ClInclude>
     <ClInclude Include="Heuristics.h">
-      <Filter>Source Files\Heuristics</Filter>
+      <Filter>Source Files\AstarCore\Heuristics</Filter>
     </ClInclude>
     <ClInclude Include="GridHeuristics.h">
-      <Filter>Source Files\Heuristics</Filter>
+      <Filter>Source Files\AstarCore\Heuristics</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
