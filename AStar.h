@@ -8,23 +8,25 @@
 #include <limits>
 #include <vector>
 
-namespace astar
-{
-    struct SearchResult
-    {
+namespace astar {
+    struct SearchResult {
         bool found{ false };
 
         std::vector<NodeId> path{};
 
-        double cost{
-            std::numeric_limits<double>::infinity()
-        };
+        double cost{ std::numeric_limits<double>::infinity() };
 
         std::size_t expandedNodes{ 0 };
     };
 
-    class Astar
-    {
+    class Astar {
+    private:
+        [[nodiscard]]
+        static std::vector<NodeId> reconstructPath(
+            const std::vector<Node>& nodes,
+            NodeId goal
+        );
+
     public:
         [[nodiscard]]
         SearchResult findPath(
@@ -33,12 +35,5 @@ namespace astar
             NodeId goal,
             const Heuristic& heuristic
         ) const;
-
-    private:
-        [[nodiscard]]
-        static std::vector<NodeId> reconstructPath(
-            const std::vector<Node>& nodes,
-            NodeId goal
-        );
     };
 }
