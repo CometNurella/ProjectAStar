@@ -1,4 +1,6 @@
 #include "Grid.h"
+#include "../Core/Node.h"
+#include "../Core/Graph.h"
 
 #include <stdexcept>
 

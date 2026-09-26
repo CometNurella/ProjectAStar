@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Heuristics.h"
-#include "Grid.h"
+#include "../Grid/Grid.h"
 
 #include <algorithm>
 #include <cmath>
@@ -20,7 +20,8 @@ namespace astar {
                     const int dx{ std::abs(a.x - b.x) };
                     const int dy{ std::abs(a.y - b.y) };
 
-                    return static_cast<double>(dx + dy);
+                    //return static_cast<double>(dx + dy);
+                    return static_cast<astar::Heuristic>(dx + dy);
                 };
         }
 

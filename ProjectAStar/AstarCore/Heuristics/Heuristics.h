@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Node.h"
+#include "../Core/Node.h"
 
 #include <functional>
 
