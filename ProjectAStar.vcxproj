@@ -143,6 +143,8 @@
     <ClCompile Include="ProjectAStar\AstarCore\Grid\Grid.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ProjectAStar\Application\Common\ApplicationStatus.h" />
+    <ClInclude Include="ProjectAStar\Application\Robot\RobotInput.h" />
     <ClInclude Include="ProjectAStar\AstarCore\Core\AStar.h" />
     <ClInclude Include="ProjectAStar\AstarCore\Core\Graph.h" />
     <ClInclude Include="ProjectAStar\AstarCore\Grid\Grid.h" />
