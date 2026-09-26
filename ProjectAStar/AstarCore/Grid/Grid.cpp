@@ -13,7 +13,7 @@ namespace astar {
 
     bool Grid::isInside(int x, int y) const noexcept {
         return x >= 0 && y >= 0 &&
-            static_cast<std::size_t>(x) < m_width &&
+            static_cast<std::size_t>(x) < m_width && 
             static_cast<std::size_t>(y) < m_height;
     }
 
