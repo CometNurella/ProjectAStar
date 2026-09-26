@@ -139,18 +139,19 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AStar.cpp" />
-    <ClCompile Include="Grid.cpp" />
+    <ClCompile Include="ProjectAStar\AstarCore\Core\AStar.cpp" />
+    <ClCompile Include="ProjectAStar\AstarCore\Grid\Grid.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AStar.h" />
-    <ClInclude Include="Graph.h" />
-    <ClInclude Include="Grid.h" />
-    <ClInclude Include="GridHeuristics.h" />
-    <ClInclude Include="GridNode.h" />
-    <ClInclude Include="Heuristics.h" />
-    <ClInclude Include="Node.h" />
+    <ClInclude Include="ProjectAStar\AstarCore\Core\AStar.h" />
+    <ClInclude Include="ProjectAStar\AstarCore\Core\Graph.h" />
+    <ClInclude Include="ProjectAStar\AstarCore\Grid\Grid.h" />
+    <ClInclude Include="ProjectAStar\AstarCore\Heuristics\GridHeuristics.h" />
+    <ClInclude Include="ProjectAStar\AstarCore\Grid\GridNode.h" />
+    <ClInclude Include="ProjectAStar\AstarCore\Heuristics\Heuristics.h" />
+    <ClInclude Include="ProjectAStar\AstarCore\Core\Node.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
