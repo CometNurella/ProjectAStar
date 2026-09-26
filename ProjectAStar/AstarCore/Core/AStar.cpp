@@ -1,4 +1,5 @@
 #include "Astar.h"
+#include "../Heuristics/Heuristics.h"
 
 #include <algorithm>
 #include <cmath>

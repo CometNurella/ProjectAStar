@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Graph.h"
+#include "../Core/Graph.h"
 #include "GridNode.h"
 
 #include <cstddef>

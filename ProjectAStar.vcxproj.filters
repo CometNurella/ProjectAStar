@@ -27,37 +27,37 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="ProjectAStar\AstarCore\Core\AStar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AStar.cpp">
-      <Filter>Source Files\AstarCore\Core</Filter>
+    <ClCompile Include="ProjectAStar\AstarCore\Grid\Grid.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Grid.cpp">
-      <Filter>Source Files\AstarCore\Grid</Filter>
+    <ClCompile Include="ProjectAStar\main.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AStar.h">
-      <Filter>Source Files\AstarCore\Core</Filter>
+    <ClInclude Include="ProjectAStar\AstarCore\Core\AStar.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Node.h">
-      <Filter>Source Files\AstarCore\Core</Filter>
+    <ClInclude Include="ProjectAStar\AstarCore\Core\Graph.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Graph.h">
-      <Filter>Source Files\AstarCore\Core</Filter>
+    <ClInclude Include="ProjectAStar\AstarCore\Grid\Grid.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Grid.h">
-      <Filter>Source Files\AstarCore\Grid</Filter>
+    <ClInclude Include="ProjectAStar\AstarCore\Heuristics\GridHeuristics.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GridNode.h">
-      <Filter>Source Files\AstarCore\Grid</Filter>
+    <ClInclude Include="ProjectAStar\AstarCore\Grid\GridNode.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Heuristics.h">
-      <Filter>Source Files\AstarCore\Heuristics</Filter>
+    <ClInclude Include="ProjectAStar\AstarCore\Heuristics\Heuristics.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GridHeuristics.h">
-      <Filter>Source Files\AstarCore\Heuristics</Filter>
+    <ClInclude Include="ProjectAStar\AstarCore\Core\Node.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

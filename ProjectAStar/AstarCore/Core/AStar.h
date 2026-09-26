@@ -2,7 +2,7 @@
 
 #include "Graph.h"
 #include "Node.h"
-#include "Heuristics.h"
+#include "../Heuristics/Heuristics.h"
 
 #include <cstddef>
 #include <limits>

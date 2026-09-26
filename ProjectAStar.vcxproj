@@ -141,10 +141,9 @@
   <ItemGroup>
     <ClCompile Include="ProjectAStar\AstarCore\Core\AStar.cpp" />
     <ClCompile Include="ProjectAStar\AstarCore\Grid\Grid.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="ProjectAStar\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AStar.h" />
     <ClInclude Include="ProjectAStar\AstarCore\Core\AStar.h" />
     <ClInclude Include="ProjectAStar\AstarCore\Core\Graph.h" />
     <ClInclude Include="ProjectAStar\AstarCore\Grid\Grid.h" />
