@@ -139,12 +139,14 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ProjectAStar\Application\IO\RobotJsonLoader.cpp" />
     <ClCompile Include="ProjectAStar\AstarCore\Core\AStar.cpp" />
     <ClCompile Include="ProjectAStar\AstarCore\Grid\Grid.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ProjectAStar\Application\Campus\CampusInput.h" />
     <ClInclude Include="ProjectAStar\Application\Common\ApplicationStatus.h" />
+    <ClInclude Include="ProjectAStar\Application\IO\RobotJsonLoader.h" />
     <ClInclude Include="ProjectAStar\Application\Robot\RobotInput.h" />
     <ClInclude Include="ProjectAStar\AstarCore\Core\AStar.h" />
     <ClInclude Include="ProjectAStar\AstarCore\Core\Graph.h" />
