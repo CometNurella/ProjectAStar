@@ -142,6 +142,7 @@
     <ClCompile Include="ProjectAStar\Application\IO\RobotJsonLoader.cpp" />
     <ClCompile Include="ProjectAStar\AstarCore\Core\AStar.cpp" />
     <ClCompile Include="ProjectAStar\AstarCore\Grid\Grid.cpp" />
+    <ClCompile Include="ProjectAStar\Benchmarks\robot\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ProjectAStar\Application\Campus\CampusInput.h" />
