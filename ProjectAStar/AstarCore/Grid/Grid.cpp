@@ -17,7 +17,7 @@ namespace astar {
             }
             // Coordinates and their neighboring positions use int. Reserve
             // room for the +1 candidate just beyond the last valid coordinate.
-            const auto coordinateLimit = static_cast<std::size_t>(std::numeric_limits<int>::max());
+            constexpr auto coordinateLimit = static_cast<std::size_t>(std::numeric_limits<int>::max());
             if (width > coordinateLimit || height > coordinateLimit ||
                 width > std::numeric_limits<std::size_t>::max() / height) {
                 throw std::length_error{ "Grid dimensions exceed the supported coordinate range" };
