@@ -157,6 +157,9 @@
     <ClInclude Include="ProjectAStar\AstarCore\Heuristics\Heuristics.h" />
     <ClInclude Include="ProjectAStar\AstarCore\Core\Node.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\BloodAngel\.codex\.chatgpt-projects\g-p-6a99271bb9648191b750fe5fca1083f5\Source\Code2\integration\grid-connectivity.patch" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
