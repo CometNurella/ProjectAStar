@@ -11,11 +11,14 @@ namespace astar {
     private:
         std::size_t m_width;
         std::size_t m_height;
+        int m_connectivity;
 
         std::vector<bool> m_walkable;
 
     public:
-        Grid(std::size_t width, std::size_t height);
+        // Four-direction movement remains the default for existing callers.
+        // Eight-direction movement forbids crossing blocked diagonal corners.
+        Grid(std::size_t width, std::size_t height, int connectivity = 4);
 
         [[nodiscard]]
         std::size_t getNodeCount() const noexcept override;
