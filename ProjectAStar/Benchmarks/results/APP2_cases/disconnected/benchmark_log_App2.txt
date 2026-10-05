@@ -1,0 +1,8 @@
+APP 2 COMPARISON: A* vs Dijkstra
+Start: A; goal: F
+Both use the shared A* core; Dijkstra uses h=0. A* uses alpha=1 Euclidean.
+Edge distances: meters; coordinates: schematic.
+
+A* Algorithm: STATUS_NO_PATH; path N/A; distance N/A; expansions 6; mean time 0.0016300000000000002 ms
+Dijkstra Algorithm: STATUS_NO_PATH; path N/A; distance N/A; expansions 6; mean time 0.00139 ms
+Times are 10-run means on a seven-node graph; small timing differences do not establish a general speed advantage.

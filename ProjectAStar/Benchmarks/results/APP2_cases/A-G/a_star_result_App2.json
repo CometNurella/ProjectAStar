@@ -1,0 +1,21 @@
+{
+  "algorithm": "A* Algorithm",
+  "start_node": "A",
+  "goal_node": "G",
+  "status": "STATUS_OK",
+  "message": "",
+  "heuristic": "euclidean",
+  "heuristic_alpha": 1,
+  "coordinate_units": "schematic",
+  "cost_units": "meters",
+  "benchmark_runs": 10,
+  "timing_aggregation": "arithmetic mean",
+  "timing_scope": "astar::Astar::findPath only; fresh state per call; validation and export excluded",
+  "computational_time_ms": 0.0019199999999999994,
+  "path_length_meters": 1020,
+  "number_of_nodes_expanded": 6,
+  "total_steps": 3,
+  "path_cell_count": 4,
+  "path": ["A", "B", "D", "G"],
+  "search_times_ms": [0.0061999999999999998, 0.0016999999999999999, 0.0015, 0.0014, 0.0016999999999999999, 0.0014, 0.0012999999999999999, 0.0012999999999999999, 0.0014, 0.0012999999999999999]
+}

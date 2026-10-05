@@ -1,0 +1,1124 @@
+{
+  "validator": "independent Python standard-library specification oracle",
+  "root": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results",
+  "required_robot_pairs": 42,
+  "required_campus_pairs": 16,
+  "records": [
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\result\\benchmark_result_M1-C1.json",
+      "application": "APP1",
+      "case": "M1-C1",
+      "experiment": "E1",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.6345500000000001,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 110.8406204335659,
+      "path_cost": 110.8406204335659,
+      "turns": 9,
+      "moves": 98,
+      "cells": 99,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\log\\benchmark_log_M1-C1.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\result\\benchmark_result_M1-C2.json",
+      "application": "APP1",
+      "case": "M1-C2",
+      "experiment": "E1",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.51491,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 103.8406204335659,
+      "path_cost": 103.8406204335659,
+      "turns": 6,
+      "moves": 91,
+      "cells": 92,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\log\\benchmark_log_M1-C2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\result\\benchmark_result_M1-C3.json",
+      "application": "APP1",
+      "case": "M1-C3",
+      "experiment": "E1",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.6123000000000001,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 109.69848480983494,
+      "path_cost": 109.69848480983495,
+      "turns": 8,
+      "moves": 101,
+      "cells": 102,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\log\\benchmark_log_M1-C3.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\result\\benchmark_result_M2-C1.json",
+      "application": "APP1",
+      "case": "M2-C1",
+      "experiment": "E1",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.32151,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 154.31370849898482,
+      "path_cost": 154.31370849898482,
+      "turns": 6,
+      "moves": 151,
+      "cells": 152,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\log\\benchmark_log_M2-C1.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\result\\benchmark_result_M2-C2.json",
+      "application": "APP1",
+      "case": "M2-C2",
+      "experiment": "E1",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.24380000000000002,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 146.7695526217004,
+      "path_cost": 146.7695526217004,
+      "turns": 6,
+      "moves": 136,
+      "cells": 137,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\log\\benchmark_log_M2-C2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\result\\benchmark_result_M2-C3.json",
+      "application": "APP1",
+      "case": "M2-C3",
+      "experiment": "E1",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.39923000000000003,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 119.31370849898474,
+      "path_cost": 119.31370849898474,
+      "turns": 5,
+      "moves": 116,
+      "cells": 117,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\log\\benchmark_log_M2-C3.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\result\\benchmark_result_M3-C1.json",
+      "application": "APP1",
+      "case": "M3-C1",
+      "experiment": "E1",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.74154,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 128.1543289325506,
+      "path_cost": 128.1543289325506,
+      "turns": 17,
+      "moves": 112,
+      "cells": 113,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\log\\benchmark_log_M3-C1.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\result\\benchmark_result_M3-C2.json",
+      "application": "APP1",
+      "case": "M3-C2",
+      "experiment": "E1",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 1.0406,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 183.74011537017753,
+      "path_cost": 183.74011537017753,
+      "turns": 10,
+      "moves": 168,
+      "cells": 169,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\log\\benchmark_log_M3-C2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\result\\benchmark_result_M3-C3.json",
+      "application": "APP1",
+      "case": "M3-C3",
+      "experiment": "E1",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.8408999999999999,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 145.66904755831206,
+      "path_cost": 145.66904755831206,
+      "turns": 12,
+      "moves": 132,
+      "cells": 133,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\log\\benchmark_log_M3-C3.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\result\\benchmark_result_M3-C4.json",
+      "application": "APP1",
+      "case": "M3-C4",
+      "experiment": "E1",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.72153,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 150.66904755831206,
+      "path_cost": 150.66904755831206,
+      "turns": 9,
+      "moves": 137,
+      "cells": 138,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\log\\benchmark_log_M3-C4.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\result\\benchmark_result_M3-C5.json",
+      "application": "APP1",
+      "case": "M3-C5",
+      "experiment": "E1",
+      "status": "STATUS_NO_PATH",
+      "timing": {
+        "mean_ms": 2.4127699999999996,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "unreachable_verified": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\log\\benchmark_log_M3-C5.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\result\\benchmark_result_EC-1.json",
+      "application": "APP1",
+      "case": "EC-1",
+      "experiment": "E1",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.18631999999999999,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 0.0,
+      "path_cost": 0.0,
+      "turns": 0,
+      "moves": 0,
+      "cells": 1,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\log\\benchmark_log_EC-1.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\result\\benchmark_result_EC-2.json",
+      "application": "APP1",
+      "case": "EC-2",
+      "experiment": "E1",
+      "status": "STATUS_INVALID",
+      "timing": {
+        "mean_ms": null,
+        "run_count": 0,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\log\\benchmark_log_EC-2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\result\\benchmark_result_EC-3.json",
+      "application": "APP1",
+      "case": "EC-3",
+      "experiment": "E1",
+      "status": "STATUS_INVALID",
+      "timing": {
+        "mean_ms": null,
+        "run_count": 0,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E1\\log\\benchmark_log_EC-3.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\result\\benchmark_result_M1-C1.json",
+      "application": "APP1",
+      "case": "M1-C1",
+      "experiment": "E2",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 1.6710900000000002,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 110.8406204335659,
+      "path_cost": 110.8406204335659,
+      "turns": 9,
+      "moves": 98,
+      "cells": 99,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\log\\benchmark_log_M1-C1.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\result\\benchmark_result_M1-C2.json",
+      "application": "APP1",
+      "case": "M1-C2",
+      "experiment": "E2",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 1.7286500000000005,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 103.8406204335659,
+      "path_cost": 103.8406204335659,
+      "turns": 8,
+      "moves": 91,
+      "cells": 92,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\log\\benchmark_log_M1-C2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\result\\benchmark_result_M1-C3.json",
+      "application": "APP1",
+      "case": "M1-C3",
+      "experiment": "E2",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 1.9396800000000003,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 109.69848480983494,
+      "path_cost": 109.69848480983494,
+      "turns": 6,
+      "moves": 101,
+      "cells": 102,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\log\\benchmark_log_M1-C3.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\result\\benchmark_result_M2-C1.json",
+      "application": "APP1",
+      "case": "M2-C1",
+      "experiment": "E2",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 1.5767600000000002,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 154.31370849898482,
+      "path_cost": 154.31370849898482,
+      "turns": 4,
+      "moves": 151,
+      "cells": 152,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\log\\benchmark_log_M2-C1.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\result\\benchmark_result_M2-C2.json",
+      "application": "APP1",
+      "case": "M2-C2",
+      "experiment": "E2",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 1.46425,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 146.7695526217004,
+      "path_cost": 146.7695526217004,
+      "turns": 5,
+      "moves": 136,
+      "cells": 137,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\log\\benchmark_log_M2-C2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\result\\benchmark_result_M2-C3.json",
+      "application": "APP1",
+      "case": "M2-C3",
+      "experiment": "E2",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 1.6293399999999998,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 119.31370849898474,
+      "path_cost": 119.31370849898474,
+      "turns": 4,
+      "moves": 116,
+      "cells": 117,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\log\\benchmark_log_M2-C3.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\result\\benchmark_result_M3-C1.json",
+      "application": "APP1",
+      "case": "M3-C1",
+      "experiment": "E2",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.7407099999999999,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 128.1543289325506,
+      "path_cost": 128.1543289325506,
+      "turns": 13,
+      "moves": 112,
+      "cells": 113,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\log\\benchmark_log_M3-C1.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\result\\benchmark_result_M3-C2.json",
+      "application": "APP1",
+      "case": "M3-C2",
+      "experiment": "E2",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 1.56293,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 183.74011537017753,
+      "path_cost": 183.74011537017753,
+      "turns": 11,
+      "moves": 168,
+      "cells": 169,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\log\\benchmark_log_M3-C2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\result\\benchmark_result_M3-C3.json",
+      "application": "APP1",
+      "case": "M3-C3",
+      "experiment": "E2",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.8885799999999999,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 145.66904755831206,
+      "path_cost": 145.66904755831206,
+      "turns": 11,
+      "moves": 132,
+      "cells": 133,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\log\\benchmark_log_M3-C3.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\result\\benchmark_result_M3-C4.json",
+      "application": "APP1",
+      "case": "M3-C4",
+      "experiment": "E2",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 1.5877500000000002,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 150.66904755831206,
+      "path_cost": 150.66904755831206,
+      "turns": 12,
+      "moves": 137,
+      "cells": 138,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\log\\benchmark_log_M3-C4.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\result\\benchmark_result_M3-C5.json",
+      "application": "APP1",
+      "case": "M3-C5",
+      "experiment": "E2",
+      "status": "STATUS_NO_PATH",
+      "timing": {
+        "mean_ms": 1.5955400000000002,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "unreachable_verified": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\log\\benchmark_log_M3-C5.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\result\\benchmark_result_EC-1.json",
+      "application": "APP1",
+      "case": "EC-1",
+      "experiment": "E2",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.23135,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 0.0,
+      "path_cost": 0.0,
+      "turns": 0,
+      "moves": 0,
+      "cells": 1,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\log\\benchmark_log_EC-1.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\result\\benchmark_result_EC-2.json",
+      "application": "APP1",
+      "case": "EC-2",
+      "experiment": "E2",
+      "status": "STATUS_INVALID",
+      "timing": {
+        "mean_ms": null,
+        "run_count": 0,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\log\\benchmark_log_EC-2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\result\\benchmark_result_EC-3.json",
+      "application": "APP1",
+      "case": "EC-3",
+      "experiment": "E2",
+      "status": "STATUS_INVALID",
+      "timing": {
+        "mean_ms": null,
+        "run_count": 0,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E2\\log\\benchmark_log_EC-3.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\result\\benchmark_result_M1-C1.json",
+      "application": "APP1",
+      "case": "M1-C1",
+      "experiment": "E3",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.42946000000000006,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 129.0,
+      "path_cost": 129.0,
+      "turns": 3,
+      "moves": 129,
+      "cells": 130,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\log\\benchmark_log_M1-C1.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\result\\benchmark_result_M1-C2.json",
+      "application": "APP1",
+      "case": "M1-C2",
+      "experiment": "E3",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.4423700000000001,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 122.0,
+      "path_cost": 122.0,
+      "turns": 3,
+      "moves": 122,
+      "cells": 123,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\log\\benchmark_log_M1-C2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\result\\benchmark_result_M1-C3.json",
+      "application": "APP1",
+      "case": "M1-C3",
+      "experiment": "E3",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.42302,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 122.0,
+      "path_cost": 122.0,
+      "turns": 4,
+      "moves": 122,
+      "cells": 123,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\log\\benchmark_log_M1-C3.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\result\\benchmark_result_M2-C1.json",
+      "application": "APP1",
+      "case": "M2-C1",
+      "experiment": "E3",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.23032,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 159.0,
+      "path_cost": 159.0,
+      "turns": 4,
+      "moves": 159,
+      "cells": 160,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\log\\benchmark_log_M2-C1.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\result\\benchmark_result_M2-C2.json",
+      "application": "APP1",
+      "case": "M2-C2",
+      "experiment": "E3",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.36243000000000003,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 162.0,
+      "path_cost": 162.0,
+      "turns": 4,
+      "moves": 162,
+      "cells": 163,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\log\\benchmark_log_M2-C2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\result\\benchmark_result_M2-C3.json",
+      "application": "APP1",
+      "case": "M2-C3",
+      "experiment": "E3",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.4032,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 124.0,
+      "path_cost": 124.0,
+      "turns": 4,
+      "moves": 124,
+      "cells": 125,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\log\\benchmark_log_M2-C3.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\result\\benchmark_result_M3-C1.json",
+      "application": "APP1",
+      "case": "M3-C1",
+      "experiment": "E3",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.7797499999999999,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 151.0,
+      "path_cost": 151.0,
+      "turns": 9,
+      "moves": 151,
+      "cells": 152,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\log\\benchmark_log_M3-C1.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\result\\benchmark_result_M3-C2.json",
+      "application": "APP1",
+      "case": "M3-C2",
+      "experiment": "E3",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 1.00217,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 206.0,
+      "path_cost": 206.0,
+      "turns": 7,
+      "moves": 206,
+      "cells": 207,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\log\\benchmark_log_M3-C2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\result\\benchmark_result_M3-C3.json",
+      "application": "APP1",
+      "case": "M3-C3",
+      "experiment": "E3",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.66178,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 165.0,
+      "path_cost": 165.0,
+      "turns": 7,
+      "moves": 165,
+      "cells": 166,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\log\\benchmark_log_M3-C3.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\result\\benchmark_result_M3-C4.json",
+      "application": "APP1",
+      "case": "M3-C4",
+      "experiment": "E3",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.5644199999999999,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 170.0,
+      "path_cost": 170.0,
+      "turns": 6,
+      "moves": 170,
+      "cells": 171,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\log\\benchmark_log_M3-C4.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\result\\benchmark_result_M3-C5.json",
+      "application": "APP1",
+      "case": "M3-C5",
+      "experiment": "E3",
+      "status": "STATUS_NO_PATH",
+      "timing": {
+        "mean_ms": 1.65131,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "unreachable_verified": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\log\\benchmark_log_M3-C5.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\result\\benchmark_result_EC-1.json",
+      "application": "APP1",
+      "case": "EC-1",
+      "experiment": "E3",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.25185,
+        "run_count": 10,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "optimal_cost": 0.0,
+      "path_cost": 0.0,
+      "turns": 0,
+      "moves": 0,
+      "cells": 1,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\log\\benchmark_log_EC-1.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\result\\benchmark_result_EC-2.json",
+      "application": "APP1",
+      "case": "EC-2",
+      "experiment": "E3",
+      "status": "STATUS_INVALID",
+      "timing": {
+        "mean_ms": null,
+        "run_count": 0,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\log\\benchmark_log_EC-2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\result\\benchmark_result_EC-3.json",
+      "application": "APP1",
+      "case": "EC-3",
+      "experiment": "E3",
+      "status": "STATUS_INVALID",
+      "timing": {
+        "mean_ms": null,
+        "run_count": 0,
+        "scope": "Astar::findPath only; fresh internal search state on every call",
+        "raw_samples_checked": true
+      },
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP1\\E3\\log\\benchmark_log_EC-3.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2\\a_star_result_App2.json",
+      "application": "APP2",
+      "query": "baseline",
+      "algorithm": "a_star",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.0018099999999999998,
+        "run_count": 10,
+        "scope": "astar::Astar::findPath only; fresh state per call; validation and export excluded",
+        "raw_samples_checked": true
+      },
+      "optimal_cost_m": 820.0,
+      "path_cost_m": 820,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2\\a_star_log_App2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2\\dijkstra_result_App2.json",
+      "application": "APP2",
+      "query": "baseline",
+      "algorithm": "dijkstra",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.00139,
+        "run_count": 10,
+        "scope": "astar::Astar::findPath only; fresh state per call; validation and export excluded",
+        "raw_samples_checked": true
+      },
+      "optimal_cost_m": 820.0,
+      "path_cost_m": 820,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2\\dijkstra_log_App2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\A-G\\a_star_result_App2.json",
+      "application": "APP2",
+      "query": "A-G",
+      "algorithm": "a_star",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.0019199999999999994,
+        "run_count": 10,
+        "scope": "astar::Astar::findPath only; fresh state per call; validation and export excluded",
+        "raw_samples_checked": true
+      },
+      "optimal_cost_m": 1020.0,
+      "path_cost_m": 1020,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\A-G\\a_star_log_App2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\A-G\\dijkstra_result_App2.json",
+      "application": "APP2",
+      "query": "A-G",
+      "algorithm": "dijkstra",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.0014299999999999998,
+        "run_count": 10,
+        "scope": "astar::Astar::findPath only; fresh state per call; validation and export excluded",
+        "raw_samples_checked": true
+      },
+      "optimal_cost_m": 1020.0,
+      "path_cost_m": 1020,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\A-G\\dijkstra_log_App2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\C-G\\a_star_result_App2.json",
+      "application": "APP2",
+      "query": "C-G",
+      "algorithm": "a_star",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.0022500000000000003,
+        "run_count": 10,
+        "scope": "astar::Astar::findPath only; fresh state per call; validation and export excluded",
+        "raw_samples_checked": true
+      },
+      "optimal_cost_m": 950.0,
+      "path_cost_m": 950,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\C-G\\a_star_log_App2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\C-G\\dijkstra_result_App2.json",
+      "application": "APP2",
+      "query": "C-G",
+      "algorithm": "dijkstra",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.00165,
+        "run_count": 10,
+        "scope": "astar::Astar::findPath only; fresh state per call; validation and export excluded",
+        "raw_samples_checked": true
+      },
+      "optimal_cost_m": 950.0,
+      "path_cost_m": 950,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\C-G\\dijkstra_log_App2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\E-B\\a_star_result_App2.json",
+      "application": "APP2",
+      "query": "E-B",
+      "algorithm": "a_star",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.00183,
+        "run_count": 10,
+        "scope": "astar::Astar::findPath only; fresh state per call; validation and export excluded",
+        "raw_samples_checked": true
+      },
+      "optimal_cost_m": 580.0,
+      "path_cost_m": 580,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\E-B\\a_star_log_App2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\E-B\\dijkstra_result_App2.json",
+      "application": "APP2",
+      "query": "E-B",
+      "algorithm": "dijkstra",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.00122,
+        "run_count": 10,
+        "scope": "astar::Astar::findPath only; fresh state per call; validation and export excluded",
+        "raw_samples_checked": true
+      },
+      "optimal_cost_m": 580.0,
+      "path_cost_m": 580,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\E-B\\dijkstra_log_App2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\A-A\\a_star_result_App2.json",
+      "application": "APP2",
+      "query": "A-A",
+      "algorithm": "a_star",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.00086,
+        "run_count": 10,
+        "scope": "astar::Astar::findPath only; fresh state per call; validation and export excluded",
+        "raw_samples_checked": true
+      },
+      "optimal_cost_m": 0.0,
+      "path_cost_m": 0,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\A-A\\a_star_log_App2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\A-A\\dijkstra_result_App2.json",
+      "application": "APP2",
+      "query": "A-A",
+      "algorithm": "dijkstra",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.00041000000000000005,
+        "run_count": 10,
+        "scope": "astar::Astar::findPath only; fresh state per call; validation and export excluded",
+        "raw_samples_checked": true
+      },
+      "optimal_cost_m": 0.0,
+      "path_cost_m": 0,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\A-A\\dijkstra_log_App2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\F-A\\a_star_result_App2.json",
+      "application": "APP2",
+      "query": "F-A",
+      "algorithm": "a_star",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.0019499999999999997,
+        "run_count": 10,
+        "scope": "astar::Astar::findPath only; fresh state per call; validation and export excluded",
+        "raw_samples_checked": true
+      },
+      "optimal_cost_m": 820.0,
+      "path_cost_m": 820,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\F-A\\a_star_log_App2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\F-A\\dijkstra_result_App2.json",
+      "application": "APP2",
+      "query": "F-A",
+      "algorithm": "dijkstra",
+      "status": "STATUS_OK",
+      "timing": {
+        "mean_ms": 0.00146,
+        "run_count": 10,
+        "scope": "astar::Astar::findPath only; fresh state per call; validation and export excluded",
+        "raw_samples_checked": true
+      },
+      "optimal_cost_m": 820.0,
+      "path_cost_m": 820,
+      "legal_and_optimal": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\F-A\\dijkstra_log_App2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\unknown\\a_star_result_App2.json",
+      "application": "APP2",
+      "query": "unknown",
+      "algorithm": "a_star",
+      "status": "STATUS_INVALID",
+      "timing": {
+        "mean_ms": null,
+        "run_count": 0,
+        "scope": "astar::Astar::findPath only; fresh state per call; validation and export excluded",
+        "raw_samples_checked": true
+      },
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\unknown\\a_star_log_App2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\unknown\\dijkstra_result_App2.json",
+      "application": "APP2",
+      "query": "unknown",
+      "algorithm": "dijkstra",
+      "status": "STATUS_INVALID",
+      "timing": {
+        "mean_ms": null,
+        "run_count": 0,
+        "scope": "astar::Astar::findPath only; fresh state per call; validation and export excluded",
+        "raw_samples_checked": true
+      },
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\unknown\\dijkstra_log_App2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\disconnected\\a_star_result_App2.json",
+      "application": "APP2",
+      "query": "disconnected",
+      "algorithm": "a_star",
+      "status": "STATUS_NO_PATH",
+      "timing": {
+        "mean_ms": 0.0016300000000000002,
+        "run_count": 10,
+        "scope": "astar::Astar::findPath only; fresh state per call; validation and export excluded",
+        "raw_samples_checked": true
+      },
+      "unreachable_verified": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\disconnected\\a_star_log_App2.txt",
+      "shared_metrics_agree": true
+    },
+    {
+      "json": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\disconnected\\dijkstra_result_App2.json",
+      "application": "APP2",
+      "query": "disconnected",
+      "algorithm": "dijkstra",
+      "status": "STATUS_NO_PATH",
+      "timing": {
+        "mean_ms": 0.00139,
+        "run_count": 10,
+        "scope": "astar::Astar::findPath only; fresh state per call; validation and export excluded",
+        "raw_samples_checked": true
+      },
+      "unreachable_verified": true,
+      "log": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\ProjectAStar\\Benchmarks\\results\\APP2_cases\\disconnected\\dijkstra_log_App2.txt",
+      "shared_metrics_agree": true
+    }
+  ],
+  "errors": [],
+  "comparison_files_verified": 8,
+  "paired_robot_cost_agreements": 14,
+  "robot_pairs_verified": 42,
+  "campus_pairs_verified": 16,
+  "passed": true,
+  "timing_limit": "Metadata and optional sample means checked; source review is needed to prove timer placement and state reset."
+}

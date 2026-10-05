@@ -1,0 +1,50 @@
+{
+  "application": "Application 2: Campus Map Pathfinding Evaluation",
+  "start_node": "A",
+  "goal_node": "F",
+  "algorithms": {
+    "a_star": {
+  "algorithm": "A* Algorithm",
+  "start_node": "A",
+  "goal_node": "F",
+  "status": "STATUS_NO_PATH",
+  "message": "OPEN exhausted without reaching the goal",
+  "heuristic": "euclidean",
+  "heuristic_alpha": 1,
+  "coordinate_units": "schematic",
+  "cost_units": "meters",
+  "benchmark_runs": 10,
+  "timing_aggregation": "arithmetic mean",
+  "timing_scope": "astar::Astar::findPath only; fresh state per call; validation and export excluded",
+  "computational_time_ms": 0.0016300000000000002,
+  "path_length_meters": null,
+  "number_of_nodes_expanded": 6,
+  "total_steps": 0,
+  "path_cell_count": 0,
+  "path": [],
+  "search_times_ms": [0.0068999999999999999, 0.0011000000000000001, 0.001, 0.0011000000000000001, 0.0012999999999999999, 0.00089999999999999998, 0.0012999999999999999, 0.00089999999999999998, 0.00089999999999999998, 0.00089999999999999998]
+}
+,
+    "dijkstra": {
+  "algorithm": "Dijkstra Algorithm",
+  "start_node": "A",
+  "goal_node": "F",
+  "status": "STATUS_NO_PATH",
+  "message": "OPEN exhausted without reaching the goal",
+  "heuristic": "zero",
+  "heuristic_alpha": 0,
+  "coordinate_units": "schematic",
+  "cost_units": "meters",
+  "benchmark_runs": 10,
+  "timing_aggregation": "arithmetic mean",
+  "timing_scope": "astar::Astar::findPath only; fresh state per call; validation and export excluded",
+  "computational_time_ms": 0.00139,
+  "path_length_meters": null,
+  "number_of_nodes_expanded": 6,
+  "total_steps": 0,
+  "path_cell_count": 0,
+  "path": [],
+  "search_times_ms": [0.001, 0.001, 0.00089999999999999998, 0.0011000000000000001, 0.00089999999999999998, 0.0057000000000000002, 0.0011000000000000001, 0.00069999999999999999, 0.00080000000000000004, 0.00069999999999999999]
+}
+  }
+}

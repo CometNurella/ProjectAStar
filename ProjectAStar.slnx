@@ -3,5 +3,8 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
+  <Project Path="CampusBenchmark/CampusBenchmark.vcxproj" Id="7a17a12b-b326-49bf-b321-b71fb9d34007" />
+  <Project Path="CampusTests/CampusTests.vcxproj" Id="f3ee29e4-aecd-4f46-b5f0-52759583caeb" />
+  <Project Path="CoreGridTests/CoreGridTests.vcxproj" Id="3bd3ff39-f5b8-406e-85da-c6c9afbf89a7" />
   <Project Path="ProjectAStar.vcxproj" Id="5728ef5b-9882-4932-8179-9b135abf71b6" />
 </Solution>

@@ -1,0 +1,25 @@
+APP 2 CAMPUS BENCHMARK: A* Algorithm
+Start: A; goal: A
+Heuristic: euclidean; alpha: 1; coordinates: schematic; edge distance: meters
+Status: STATUS_OK
+Path length: 0 meters
+Total steps (edges): 0
+Path cell count: 1
+Nodes expanded (neighbor processing; goal excluded): 0
+Computational time: 0.00085999999999999998 ms (mean of 10 fresh core searches)
+Benchmark runs: 10
+Timing aggregation: arithmetic mean
+Timing scope: astar::Astar::findPath only; fresh state per call; validation and export excluded
+Path: A
+
+Campus map: A-G retain node IDs; * marks schematic route segments.
+Start: A; goal: A. Route distance comes from edge weights.
+ 7 | . . . . . . . . . . 
+ 6 | . . . . E . . . . . 
+ 5 | . . . . . . . . . . 
+ 4 | . C . . . . . F . . 
+ 3 | . . . . . D . . . . 
+ 2 | . . . . . . . . . . 
+ 1 | . . . B . . . . G . 
+ 0 | A . . . . . . . . . 
+     0 1 2 3 4 5 6 7 8 9

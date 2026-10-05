@@ -1,0 +1,7 @@
+APP 2 COMPARISON: A* vs Dijkstra
+Start: X; goal: F
+Both use the shared A* core; Dijkstra uses h=0. A* uses alpha=1 Euclidean.
+Edge distances: meters; coordinates: schematic.
+
+A* Algorithm: STATUS_INVALID; path N/A; distance N/A; expansions 0; mean time N/A
+Dijkstra Algorithm: STATUS_INVALID; path N/A; distance N/A; expansions 0; mean time N/A
