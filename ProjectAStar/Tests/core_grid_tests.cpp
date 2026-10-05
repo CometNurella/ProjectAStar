@@ -1,6 +1,5 @@
-#include "../Core/AstarCore/Core/AStar.h"
-#include "../Core/AstarCore/Grid/Grid.h"
-
+#include "../AstarCore/Core/AStar.h"
+#include "../AstarCore/Grid/Grid.h"
 #include <cmath>
 #include <iostream>
 #include <limits>
