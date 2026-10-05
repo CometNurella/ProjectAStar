@@ -1,0 +1,21 @@
+{
+  "algorithm": "Dijkstra Algorithm",
+  "start_node": "A",
+  "goal_node": "F",
+  "status": "STATUS_OK",
+  "message": "",
+  "heuristic": "zero",
+  "heuristic_alpha": 0,
+  "coordinate_units": "schematic",
+  "cost_units": "meters",
+  "benchmark_runs": 10,
+  "timing_aggregation": "arithmetic mean",
+  "timing_scope": "astar::Astar::findPath only; fresh state per call; validation and export excluded",
+  "computational_time_ms": 0.12694,
+  "path_length_meters": 820,
+  "number_of_nodes_expanded": 5,
+  "total_steps": 3,
+  "path_cell_count": 4,
+  "path": ["A", "B", "D", "F"],
+  "search_times_ms": [0.13350000000000001, 0.122, 0.1464, 0.14319999999999999, 0.128, 0.1179, 0.1225, 0.1198, 0.1195, 0.1166]
+}

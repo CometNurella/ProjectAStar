@@ -39,9 +39,6 @@
     <ClCompile Include="ProjectAStar\Benchmarks\robot\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ProjectAStar\Benchmarks\campus\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ProjectAStar\AstarCore\Core\AStar.h">
