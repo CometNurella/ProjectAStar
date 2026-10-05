@@ -139,6 +139,9 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\ProjectAStar\AstarCore\Core\AStar.cpp" />
+    <ClCompile Include="..\ProjectAStar\AstarCore\Grid\Grid.cpp" />
+    <ClCompile Include="..\ProjectAStar\Tests\campus_benchmark_tests.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

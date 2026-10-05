@@ -139,7 +139,6 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\BloodAngel\.codex\.chatgpt-projects\g-p-6a99271bb9648191b750fe5fca1083f5\Source\Code2\App2\tests\app2_tests.cpp" />
     <ClCompile Include="ProjectAStar\Application\IO\RobotJsonLoader.cpp" />
     <ClCompile Include="ProjectAStar\AstarCore\Core\AStar.cpp" />
     <ClCompile Include="ProjectAStar\AstarCore\Grid\Grid.cpp" />
