@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{5728ef5b-9882-4932-8179-9b135abf71b6}</ProjectGuid>
-    <RootNamespace>ProjectAStar</RootNamespace>
+    <ProjectGuid>{f3ee29e4-aecd-4f46-b5f0-52759583caeb}</ProjectGuid>
+    <RootNamespace>CampusTests</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,24 +139,6 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\BloodAngel\.codex\.chatgpt-projects\g-p-6a99271bb9648191b750fe5fca1083f5\Source\Code2\App2\tests\app2_tests.cpp" />
-    <ClCompile Include="ProjectAStar\Application\IO\RobotJsonLoader.cpp" />
-    <ClCompile Include="ProjectAStar\AstarCore\Core\AStar.cpp" />
-    <ClCompile Include="ProjectAStar\AstarCore\Grid\Grid.cpp" />
-    <ClCompile Include="ProjectAStar\Benchmarks\robot\main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="ProjectAStar\Application\Campus\CampusInput.h" />
-    <ClInclude Include="ProjectAStar\Application\Common\ApplicationStatus.h" />
-    <ClInclude Include="ProjectAStar\Application\IO\RobotJsonLoader.h" />
-    <ClInclude Include="ProjectAStar\Application\Robot\RobotInput.h" />
-    <ClInclude Include="ProjectAStar\AstarCore\Core\AStar.h" />
-    <ClInclude Include="ProjectAStar\AstarCore\Core\Graph.h" />
-    <ClInclude Include="ProjectAStar\AstarCore\Grid\Grid.h" />
-    <ClInclude Include="ProjectAStar\AstarCore\Heuristics\GridHeuristics.h" />
-    <ClInclude Include="ProjectAStar\AstarCore\Grid\GridNode.h" />
-    <ClInclude Include="ProjectAStar\AstarCore\Heuristics\Heuristics.h" />
-    <ClInclude Include="ProjectAStar\AstarCore\Core\Node.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
