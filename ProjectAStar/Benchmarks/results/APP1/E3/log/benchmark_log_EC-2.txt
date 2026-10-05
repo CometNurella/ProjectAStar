@@ -1,0 +1,32 @@
+======================================================
+Map: Edge_Cases | Case: EC-2
+Description: Ct hoặc n trên vật cản -> INVALID
+input_source: original Code 2 App1 built-in fixtures; endpoints and obstacles preserved
+search_core: shared Core/AstarCore astar::Astar::findPath
+configuration: E3
+algorithm: A*
+heuristic: Manhattan
+connectivity: 4
+start: (31,50)
+goal: (50,50)
+status: STATUS_INVALID
+reason: Start or goal is blocked
+path_length: N/A
+n_turns: 0
+turns: 0
+total_steps: 0
+path_cell_count: 0
+unique_obstacle_cells: 351
+nodes_expanded: 0
+expanded_nodes: 0
+evaluated_nodes: 0
+expansion_definition: neighbor processing events; goal selection and stale entries excluded; re-expansions counted
+tie_breaking: minimum f, minimum h, FIFO insertion order
+timing_runs: 0
+timing_clock: std::chrono::steady_clock
+timing_scope: Astar::findPath only; fresh internal search state on every call
+timing_aggregation: arithmetic mean
+execution_time_ms: N/A
+search_times_ms: []
+path: []
+======================================================

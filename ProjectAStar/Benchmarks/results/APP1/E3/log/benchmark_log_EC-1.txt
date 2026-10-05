@@ -1,0 +1,41 @@
+======================================================
+Map: Edge_Cases | Case: EC-1
+Description: Ct = n (Chi phí 0)
+input_source: original Code 2 App1 built-in fixtures; endpoints and obstacles preserved
+search_core: shared Core/AstarCore astar::Astar::findPath
+configuration: E3
+algorithm: A*
+heuristic: Manhattan
+connectivity: 4
+start: (50,50)
+goal: (50,50)
+status: STATUS_OK
+reason: 
+path_length: 0
+n_turns: 0
+turns: 0
+total_steps: 0
+path_cell_count: 1
+unique_obstacle_cells: 0
+nodes_expanded: 0
+expanded_nodes: 0
+evaluated_nodes: 0
+expansion_definition: neighbor processing events; goal selection and stale entries excluded; re-expansions counted
+tie_breaking: minimum f, minimum h, FIFO insertion order
+timing_runs: 10
+timing_clock: std::chrono::steady_clock
+timing_scope: Astar::findPath only; fresh internal search state on every call
+timing_aggregation: arithmetic mean
+execution_time_ms: 0.25185000000000002
+search_times_ms: [0.24310000000000001, 0.2233, 0.20030000000000001, 0.2142, 0.56000000000000005, 0.23449999999999999, 0.28420000000000001, 0.21079999999999999, 0.17960000000000001, 0.16850000000000001]
+path: (50,50)
+
+ASCII crop: x=48..52, y=48..52
+Bottom-left origin: y increases upward; rows print from high y to low y.
+Legend: S start, G goal, @ same-cell endpoints, # obstacle, * path, . free
+52 | . . . . . 
+51 | . . . . . 
+50 | . . @ . . 
+49 | . . . . . 
+48 | . . . . . 
+======================================================

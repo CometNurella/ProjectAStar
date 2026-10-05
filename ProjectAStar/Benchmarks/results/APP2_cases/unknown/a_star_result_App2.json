@@ -1,0 +1,21 @@
+{
+  "algorithm": "A* Algorithm",
+  "start_node": "X",
+  "goal_node": "F",
+  "status": "STATUS_INVALID",
+  "message": "Start or goal ID is not a campus node",
+  "heuristic": "euclidean",
+  "heuristic_alpha": 1,
+  "coordinate_units": "schematic",
+  "cost_units": "meters",
+  "benchmark_runs": 0,
+  "timing_aggregation": "arithmetic mean",
+  "timing_scope": "astar::Astar::findPath only; fresh state per call; validation and export excluded",
+  "computational_time_ms": null,
+  "path_length_meters": null,
+  "number_of_nodes_expanded": 0,
+  "total_steps": 0,
+  "path_cell_count": 0,
+  "path": [],
+  "search_times_ms": []
+}
