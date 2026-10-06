@@ -1,0 +1,131 @@
+{
+  "run_directory": "C:\\Users\\BloodAngel\\.codex\\.chatgpt-projects\\g-p-6a99271bb9648191b750fe5fca1083f5\\robot_map_importer\\tests\\test_runs\\20261006T142523_677620Z",
+  "fixture_scope": "Synthetic printed-label drawing fixtures, not photographs of handwriting.",
+  "ocr_backend": "windows",
+  "importer": "C:\\Users\\BloodAngel\\.codex\\.chatgpt-projects\\g-p-6a99271bb9648191b750fe5fca1083f5\\robot_map_importer\\build\\Release\\robot_map_importer.exe",
+  "runner": "D:\\VisualStudio\\BTL_GT1\\ProjectAStar\\x64\\Release\\ProjectAStar.exe",
+  "checks": [
+    {
+      "fixture": "multicolour_scan",
+      "accepted_labels": 3,
+      "blocked_cells": 923,
+      "runner": {
+        "E1": {
+          "steps": 63,
+          "cost_grid_units": 79.98275605729683,
+          "path_length": 39.99137802864841
+        },
+        "E2": {
+          "steps": 63,
+          "cost_grid_units": 79.98275605729683,
+          "path_length": 39.99137802864841
+        },
+        "E3": {
+          "steps": 104,
+          "cost_grid_units": 104.0,
+          "path_length": 52.0
+        }
+      }
+    },
+    {
+      "fixture": "multicolour_shadow",
+      "accepted_labels": 3,
+      "blocked_cells": 923,
+      "runner": {
+        "E1": {
+          "steps": 63,
+          "cost_grid_units": 79.98275605729683,
+          "path_length": 39.99137802864841
+        },
+        "E2": {
+          "steps": 63,
+          "cost_grid_units": 79.98275605729683,
+          "path_length": 39.99137802864841
+        },
+        "E3": {
+          "steps": 104,
+          "cost_grid_units": 104.0,
+          "path_length": 52.0
+        }
+      }
+    },
+    {
+      "fixture": "multicolour_perspective",
+      "accepted_labels": 3,
+      "blocked_cells": 923,
+      "runner": {
+        "E1": {
+          "steps": 63,
+          "cost_grid_units": 79.98275605729683,
+          "path_length": 39.99137802864841
+        },
+        "E2": {
+          "steps": 63,
+          "cost_grid_units": 79.98275605729683,
+          "path_length": 39.99137802864841
+        },
+        "E3": {
+          "steps": 104,
+          "cost_grid_units": 104.0,
+          "path_length": 52.0
+        }
+      }
+    },
+    {
+      "unicode_and_space_paths": true,
+      "input": "C:\\Users\\BloodAngel\\.codex\\.chatgpt-projects\\g-p-6a99271bb9648191b750fe5fca1083f5\\robot_map_importer\\tests\\test_runs\\20261006T142523_677620Z\\th\u01b0 m\u1ee5c ki\u1ec3m th\u1eed\\b\u1ea3n \u0111\u1ed3 m\u00e0u.png",
+      "output": "C:\\Users\\BloodAngel\\.codex\\.chatgpt-projects\\g-p-6a99271bb9648191b750fe5fca1083f5\\robot_map_importer\\tests\\test_runs\\20261006T142523_677620Z\\th\u01b0 m\u1ee5c ki\u1ec3m th\u1eed\\k\u1ebft qu\u1ea3.json"
+    },
+    {
+      "rejected": "overwrite_source_image",
+      "source_bytes_preserved": true
+    },
+    {
+      "rejected": "hard_link_alias_of_source",
+      "source_bytes_preserved": true,
+      "alias_bytes_preserved": true
+    },
+    {
+      "rejected": "width_too_small"
+    },
+    {
+      "rejected": "nonpositive_cell_size"
+    },
+    {
+      "rejected": "nonfinite_cell_size"
+    },
+    {
+      "rejected": "unsafe_map_id"
+    },
+    {
+      "rejected": "fractional_endpoint"
+    },
+    {
+      "rejected": "outside_endpoint"
+    },
+    {
+      "rejected": "blocked_endpoint"
+    },
+    {
+      "rejected": "bad_coverage"
+    },
+    {
+      "rejected": "manual_headless_conflict"
+    },
+    {
+      "rejected": "no_obstacle_label"
+    },
+    {
+      "rejected": "unclosed_object"
+    },
+    {
+      "rejected": "missing_image"
+    },
+    {
+      "explicit_empty_map": true
+    }
+  ],
+  "failures": [],
+  "assertion_count": 107,
+  "passed": true
+}

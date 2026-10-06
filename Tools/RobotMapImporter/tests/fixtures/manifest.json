@@ -1,0 +1,107 @@
+{
+  "description": "Synthetic printed-label drawing fixtures, not photographs of handwriting.",
+  "grid_width": 60,
+  "grid_height": 60,
+  "cell_size": 0.5,
+  "rectified_size": [
+    1200,
+    1200
+  ],
+  "start_cell": [
+    3,
+    3
+  ],
+  "goal_cell": [
+    55,
+    55
+  ],
+  "label_boxes": [
+    [
+      169,
+      210,
+      400,
+      240
+    ],
+    [
+      754,
+      230,
+      985,
+      260
+    ],
+    [
+      259,
+      600,
+      490,
+      630
+    ]
+  ],
+  "photo_corners_tl_tr_br_bl": [
+    [
+      160,
+      120
+    ],
+    [
+      1250,
+      65
+    ],
+    [
+      1330,
+      1280
+    ],
+    [
+      80,
+      1190
+    ]
+  ],
+  "probes": {
+    "blue_outline_interior": {
+      "cell": [
+        14,
+        47
+      ],
+      "blocked": true
+    },
+    "green_outline_interior": {
+      "cell": [
+        42,
+        44
+      ],
+      "blocked": true
+    },
+    "red_concave_top": {
+      "cell": [
+        23,
+        28
+      ],
+      "blocked": true
+    },
+    "red_concave_leg": {
+      "cell": [
+        11,
+        15
+      ],
+      "blocked": true
+    },
+    "red_concave_free_notch": {
+      "cell": [
+        23,
+        15
+      ],
+      "blocked": false
+    },
+    "unlabelled_coloured_shape": {
+      "cell": [
+        45,
+        14
+      ],
+      "blocked": false
+    },
+    "white_corridor": {
+      "cell": [
+        30,
+        40
+      ],
+      "blocked": false
+    }
+  }
+}
