@@ -1,6 +1,4 @@
 #pragma once
-#include "../../AstarCore/Grid/GridNode.h"
-
 #include<vector>
 #include<string>
 
@@ -10,10 +8,16 @@ namespace application::robot {
 		int x2, y2;
 	};
 
+	// Ct and n are world coordinates, not cell indices. Convert with floor
+	// only after validating the point against this input's cell size and grid.
+	struct WorldPoint {
+		double x, y;
+	};
+
 	struct RobotCase {
 		std::string id;
-		astar::GridNode Ct;
-		astar::GridNode n;
+		WorldPoint Ct;
+		WorldPoint n;
 	};
 
 	struct RobotMap {

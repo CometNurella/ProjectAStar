@@ -1,6 +1,4 @@
-// App 1 uses the established shared core in ../Core/AstarCore.
-// The legacy App1/AStar and App1/Grid files are retained as imported references;
-// this executable does not compile or call their separate search implementation.
+// Robot application: load fixtures or external JSON, then call the shared A* core.
 #ifdef _WIN32
 #ifndef NOMINMAX
 #define NOMINMAX
@@ -11,6 +9,7 @@
 #include "../../AstarCore/Core/AStar.h"
 #include "../../AstarCore/Grid/Grid.h"
 #include "../../AstarCore/Heuristics/GridHeuristics.h"
+#include "../../Application/IO/RobotJsonLoader.h"
 
 #include <algorithm>
 #include <chrono>
@@ -20,6 +19,7 @@
 #include <iomanip>
 #include <iostream>
 #include <map>
+#include <limits>
 #include <numeric>
 #include <optional>
 #include <set>
@@ -43,6 +43,15 @@ struct Point {
     }
 };
 
+using WorldPoint = application::robot::WorldPoint;
+struct GridSettings {
+    int width = WIDTH;
+    int height = HEIGHT;
+    double cellSize = 1.0;
+    std::string origin = "bottom-left";
+    std::string inputSource = "original Code 2 App1 built-in fixtures; endpoints and obstacles preserved";
+    std::string inputFile;
+};
 struct Rect { int x1, y1, x2, y2; };
 struct TestCaseConfig {
     std::string mapName;
@@ -51,7 +60,67 @@ struct TestCaseConfig {
     Point start;
     Point goal;
     std::vector<Rect> obstacles;
+    GridSettings settings{};
+    std::optional<WorldPoint> startWorld;
+    std::optional<WorldPoint> goalWorld;
+    bool startCellRepresentable = true;
+    bool goalCellRepresentable = true;
+    std::string endpointError;
 };
+
+// JSON endpoints are world positions; rectangle bounds remain cell indices.
+std::optional<Point> toCell(WorldPoint world, double cellSize) {
+    const double x = std::floor(world.x / cellSize);
+    const double y = std::floor(world.y / cellSize);
+    const auto minimum = static_cast<double>(std::numeric_limits<int>::min());
+    const auto maximum = static_cast<double>(std::numeric_limits<int>::max());
+    if (!std::isfinite(x) || !std::isfinite(y)
+        || x < minimum || x > maximum || y < minimum || y > maximum) return std::nullopt;
+    return Point{static_cast<int>(x), static_cast<int>(y)};
+}
+WorldPoint cellCenter(Point cell, double cellSize) {
+    return {(cell.x + 0.5) * cellSize, (cell.y + 0.5) * cellSize};
+}
+bool worldInside(WorldPoint point, const GridSettings& settings) {
+    return point.x >= 0.0 && point.y >= 0.0
+        && point.x < settings.width * settings.cellSize
+        && point.y < settings.height * settings.cellSize;
+}
+std::vector<TestCaseConfig> externalCases(const application::robot::RobotInput& input,
+    const fs::path& file, const std::string& mapFilter, const std::string& caseFilter) {
+    std::vector<TestCaseConfig> cases;
+    bool selectedMapExists = mapFilter.empty();
+    for (const auto& map : input.maps) {
+        if (!mapFilter.empty() && map.id != mapFilter) continue;
+        selectedMapExists = true;
+        std::vector<Rect> obstacles;
+        for (const auto& rectangle : map.obstacles) {
+            obstacles.push_back({rectangle.x1, rectangle.y1, rectangle.x2, rectangle.y2});
+        }
+        for (const auto& query : map.cases) {
+            if (!caseFilter.empty() && query.id != caseFilter) continue;
+            TestCaseConfig test{map.id, query.id, map.description, {}, {}, obstacles};
+            test.settings = {input.width, input.height, input.cellSize, input.origin,
+                             "external JSON", fs::absolute(file).u8string()};
+            test.startWorld = query.Ct;
+            test.goalWorld = query.n;
+            const auto start = toCell(query.Ct, input.cellSize);
+            const auto goal = toCell(query.n, input.cellSize);
+            test.startCellRepresentable = start.has_value();
+            test.goalCellRepresentable = goal.has_value();
+            test.start = start.value_or(Point{-1,-1});
+            test.goal = goal.value_or(Point{-1,-1});
+            if (!start || !goal || !worldInside(query.Ct, test.settings)
+                || !worldInside(query.n, test.settings)) {
+                test.endpointError = "Start or goal world position is outside the grid";
+            }
+            cases.push_back(std::move(test));
+        }
+    }
+    if (!selectedMapExists) throw std::invalid_argument("Unknown map selector: " + mapFilter);
+    if (cases.empty()) throw std::invalid_argument("No cases match the selected map/case");
+    return cases;
+}
 
 enum class ApplicationStatus { OK, INVALID, NO_PATH };
 const char* statusName(ApplicationStatus status) {
@@ -79,6 +148,7 @@ struct AStarResult {
     ApplicationStatus status{ ApplicationStatus::INVALID };
     std::string reason;
     std::optional<double> path_length;
+    std::optional<double> core_cost_grid_units;
     std::size_t n_turns{ 0 };
     std::optional<double> time_ms;
     std::vector<double> search_times_ms;
@@ -124,9 +194,9 @@ void setObstacles(astar::Grid& grid, const std::vector<Rect>& obstacles) {
 
 std::size_t countUniqueObstacles(const astar::Grid& grid) {
     std::size_t count = 0;
-    for (int y = 0; y < HEIGHT; ++y) {
-        for (int x = 0; x < WIDTH; ++x) {
-            if (!grid.isWalkable(x, y)) ++count;
+    for (std::size_t y = 0; y < grid.getHeight(); ++y) {
+        for (std::size_t x = 0; x < grid.getWidth(); ++x) {
+            if (!grid.isWalkable(static_cast<int>(x), static_cast<int>(y))) ++count;
         }
     }
     return count;
@@ -159,13 +229,14 @@ void validatePath(const TestCaseConfig& test, const astar::Grid& grid,
             sum += 1.0;
         }
     }
-    require(result.path_length && approximatelyEqual(sum, *result.path_length), "Path sum differs from core cost");
+    require(result.core_cost_grid_units && approximatelyEqual(sum, *result.core_cost_grid_units), "Path sum differs from core cost");
+    require(result.path_length && approximatelyEqual(*result.path_length / test.settings.cellSize, sum), "Physical length differs from scaled path cost");
 }
 
 AStarResult runBenchmark(const TestCaseConfig& test, const Configuration& configuration,
     int runCount = RUN_COUNT) {
     AStarResult result;
-    astar::Grid grid(WIDTH, HEIGHT, configuration.connectivity);
+    astar::Grid grid(test.settings.width, test.settings.height, configuration.connectivity);
     // Graph construction, inclusive rectangle validation and endpoint checks
     // are intentionally outside the measured core-search interval.
     try {
@@ -176,6 +247,17 @@ AStarResult runBenchmark(const TestCaseConfig& test, const Configuration& config
         return result;
     }
     result.unique_obstacles = countUniqueObstacles(grid);
+    if (!test.endpointError.empty()) {
+        result.reason = test.endpointError;
+        return result;
+    }
+    // Ensure any simple grid path can be represented as a finite physical length.
+    const double upperBound = static_cast<double>(grid.getNodeCount() - 1)
+        * std::sqrt(2.0) * test.settings.cellSize;
+    if (!std::isfinite(upperBound)) {
+        result.reason = "cell_size is too large to represent grid path lengths";
+        return result;
+    }
     if (!grid.isInside(test.start.x, test.start.y) || !grid.isInside(test.goal.x, test.goal.y)) {
         result.reason = "Start or goal is outside the grid";
         return result;
@@ -214,7 +296,8 @@ AStarResult runBenchmark(const TestCaseConfig& test, const Configuration& config
     result.nodes_expanded = first.expandedNodes;
     result.status = first.found ? ApplicationStatus::OK : ApplicationStatus::NO_PATH;
     if (first.found) {
-        result.path_length = first.cost;
+        result.core_cost_grid_units = first.cost;
+        result.path_length = first.cost * test.settings.cellSize;
         for (auto id : first.path) {
             const auto point = grid.toGridNode(id);
             result.path.push_back({ point.x,point.y });
@@ -266,29 +349,43 @@ std::string serializeJson(const TestCaseConfig& test, const Configuration& confi
         };
     const auto text = [&](const std::string& name, const std::string& value) { field(name, jsonString(value)); };
     const auto integer = [&](const std::string& name, std::size_t value) { field(name, std::to_string(value)); };
-    integer("schema_version", 2);
+    integer("schema_version", 3);
     text("application", "APP1");
     text("map", test.mapName);
     text("case", test.caseId);
     text("description", test.description);
-    text("input_source", "original Code 2 App1 built-in fixtures; endpoints and obstacles preserved");
-    text("search_core", "shared Core/AstarCore astar::Astar::findPath");
+    text("input_source", test.settings.inputSource);
+    if (!test.settings.inputFile.empty()) text("input_file", test.settings.inputFile);
+    text("search_core", "shared AstarCore astar::Astar::findPath");
     text("configuration", configuration.id);
     text("algorithm", configuration.id == "E2" ? "Dijkstra" : "A*");
     text("heuristic", configuration.heuristicName);
     integer("connectivity", configuration.connectivity);
-    text("origin", "bottom-left");
-    integer("width", WIDTH);
-    integer("height", HEIGHT);
-    field("cell_size", "1");
+    text("origin", test.settings.origin);
+    integer("width", test.settings.width);
+    integer("height", test.settings.height);
+    field("cell_size", number(test.settings.cellSize));
+    text("path_length_units", "world units");
     field("corner_cutting", "false");
-    field("start", "[" + std::to_string(test.start.x) + ", " + std::to_string(test.start.y) + "]");
-    field("goal", "[" + std::to_string(test.goal.x) + ", " + std::to_string(test.goal.y) + "]");
+    field("start", test.startCellRepresentable
+        ? "[" + std::to_string(test.start.x) + ", " + std::to_string(test.start.y) + "]" : "null");
+    field("goal", test.goalCellRepresentable
+        ? "[" + std::to_string(test.goal.x) + ", " + std::to_string(test.goal.y) + "]" : "null");
+    const auto worldJson = [](WorldPoint point) {
+        std::ostringstream position;
+        position << '[' << std::setprecision(17) << point.x << ", " << point.y << ']';
+        return position.str();
+    };
+    field("start_world", worldJson(test.startWorld.value_or(WorldPoint{
+        test.start.x * test.settings.cellSize, test.start.y * test.settings.cellSize})));
+    field("goal_world", worldJson(test.goalWorld.value_or(WorldPoint{
+        test.goal.x * test.settings.cellSize, test.goal.y * test.settings.cellSize})));
     text("status", statusName(result.status));
     text("reason", result.reason);
     field("success", result.status == ApplicationStatus::OK ? "true" : "false");
     field("path_length", number(result.path_length));
     field("cost", number(result.path_length));
+    field("core_cost_grid_units", number(result.core_cost_grid_units));
     integer("n_turns", result.n_turns);
     integer("turns", result.n_turns);
     integer("total_steps", result.totalSteps());
@@ -319,7 +416,17 @@ std::string serializeJson(const TestCaseConfig& test, const Configuration& confi
         path << '[' << result.path[i].x << ", " << result.path[i].y << ']';
     }
     path << ']';
-    field("path", path.str());
+    field("path", path.str()); // Existing consumers keep their cell-index path.
+    field("path_cells", path.str());
+    std::ostringstream centers;
+    centers << '[';
+    for (std::size_t i = 0; i < result.path.size(); ++i) {
+        if (i) centers << ", ";
+        const auto center = cellCenter(result.path[i], test.settings.cellSize);
+        centers << '[' << std::setprecision(17) << center.x << ", " << center.y << ']';
+    }
+    centers << ']';
+    field("path_centers", centers.str());
     out << "\n}\n";
     return out.str();
 }
@@ -330,8 +437,11 @@ std::string serializeLog(const TestCaseConfig& test, const Configuration& config
     out << "======================================================\n"
         << "Map: " << test.mapName << " | Case: " << test.caseId << '\n'
         << "Description: " << test.description << '\n'
-        << "input_source: original Code 2 App1 built-in fixtures; endpoints and obstacles preserved\n"
-        << "search_core: shared Core/AstarCore astar::Astar::findPath\n"
+        << "input_source: " << test.settings.inputSource << '\n'
+        << "input_file: " << test.settings.inputFile << '\n'
+        << "grid: " << test.settings.width << 'x' << test.settings.height
+        << "; cell_size: " << std::setprecision(17) << test.settings.cellSize << '\n'
+        << "search_core: shared AstarCore astar::Astar::findPath\n"
         << "configuration: " << configuration.id << '\n'
         << "algorithm: " << (configuration.id == "E2" ? "Dijkstra" : "A*") << '\n'
         << "heuristic: " << configuration.heuristicName << '\n'
@@ -367,9 +477,16 @@ std::string serializeLog(const TestCaseConfig& test, const Configuration& config
         if (i) out << " -> ";
         out << '(' << result.path[i].x << ',' << result.path[i].y << ')';
     }
+    out << "\npath_centers: ";
+    if (result.path.empty()) out << "[]";
+    for (std::size_t i = 0; i < result.path.size(); ++i) {
+        if (i) out << " -> ";
+        const auto center = cellCenter(result.path[i], test.settings.cellSize);
+        out << '(' << std::setprecision(17) << center.x << ',' << center.y << ')';
+    }
     out << '\n';
     if (result.status != ApplicationStatus::INVALID) {
-        astar::Grid grid(WIDTH, HEIGHT, configuration.connectivity);
+        astar::Grid grid(test.settings.width, test.settings.height, configuration.connectivity);
         setObstacles(grid, test.obstacles);
         int minX = std::min(test.start.x, test.goal.x), maxX = std::max(test.start.x, test.goal.x);
         int minY = std::min(test.start.y, test.goal.y), maxY = std::max(test.start.y, test.goal.y);
@@ -377,8 +494,8 @@ std::string serializeLog(const TestCaseConfig& test, const Configuration& config
             minX = std::min(minX, point.x); maxX = std::max(maxX, point.x);
             minY = std::min(minY, point.y); maxY = std::max(maxY, point.y);
         }
-        minX = std::max(0, minX - 2); maxX = std::min(WIDTH - 1, maxX + 2);
-        minY = std::max(0, minY - 2); maxY = std::min(HEIGHT - 1, maxY + 2);
+        minX = std::max(0, minX - 2); maxX = std::min(test.settings.width - 1, maxX + 2);
+        minY = std::max(0, minY - 2); maxY = std::min(test.settings.height - 1, maxY + 2);
         const std::set<Point> pathSet(result.path.begin(), result.path.end());
         out << "\nASCII crop: x=" << minX << ".." << maxX << ", y=" << minY << ".." << maxY << '\n'
             << "Bottom-left origin: y increases upward; rows print from high y to low y.\n"
@@ -475,9 +592,13 @@ void selfTest(const std::vector<TestCaseConfig>& cases) {
 }
 
 void help() {
-    std::cout << "Usage: app1_benchmark [--configuration E1|E2|E3] [--output PATH] [--self-test]\n"
+    std::cout << "Usage: app1_benchmark [--input FILE] [--map ID] [--case ID] [--configuration E1|E2|E3] [--output PATH] [--self-test]\n"
         << "E1: 8 directions + octile; E2: 8 directions + zero; E3: 4 directions + Manhattan.\n"
         << "Default: E1, output/APP1/E1. --output writes PATH/result and PATH/log.\n"
+        << "Without --input, run the original built-in fixtures.\n"
+        << "With --input, load documented JSON; --map/--case optionally select queries.\n"
+        << "Ct/n are world positions, obstacle rectangles are inclusive cell indices.\n"
+        << "path_cells records indices; path_centers records world cell centers.\n"
         << "--self-test alone validates without writing benchmarks.\n"
         << "--self-test --output PATH validates and exports the selected configuration.\n"
         << "Each valid case records a mean of 10 fresh findPath calls.\n";
@@ -492,14 +613,29 @@ int main(int argc, char* argv[]) {
         fs::path output;
         bool outputSpecified = false;
         bool testRequested = false;
+        std::optional<fs::path> inputFile;
+        std::string mapFilter, caseFilter;
         for (int i = 1; i < argc; ++i) {
             const std::string argument = argv[i];
             if (argument == "--help" || argument == "-h") { help(); return 0; }
             if (argument == "--configuration" && i + 1 < argc) configuration = configurationFor(argv[++i]);
             else if (argument == "--output" && i + 1 < argc) { output = argv[++i]; outputSpecified = true; }
+            else if (argument == "--input" && i + 1 < argc) inputFile = fs::u8path(argv[++i]);
+            else if (argument == "--map" && i + 1 < argc) {
+                mapFilter = argv[++i];
+                if (mapFilter.empty()) throw std::invalid_argument("Empty map selector");
+            }
+            else if (argument == "--case" && i + 1 < argc) {
+                caseFilter = argv[++i];
+                if (caseFilter.empty()) throw std::invalid_argument("Empty case selector");
+            }
             else if (argument == "--self-test") testRequested = true;
             else throw std::invalid_argument("Unknown or incomplete option: " + argument);
         }
+        if (!inputFile && (!mapFilter.empty() || !caseFilter.empty()))
+            throw std::invalid_argument("--map/--case requires --input");
+        if (inputFile && testRequested)
+            throw std::invalid_argument("--self-test validates built-in fixtures; run it separately from --input");
         if (!outputSpecified) output = fs::path("output") / "APP1" / configuration.id;
 
         std::vector<Rect> obsM1 = { {30,30,32,70}, {68,30,70,70}, {30,68,70,70} };
@@ -526,12 +662,16 @@ int main(int argc, char* argv[]) {
         };
 
 
+        if (inputFile) {
+            const auto input = application::io::loadRobotInput(*inputFile);
+            testCases = externalCases(input, *inputFile, mapFilter, caseFilter);
+        }
         if (testRequested) {
             selfTest(testCases);
             if (!outputSpecified) return 0;
         }
         for (const auto& test : testCases) executeAndVisualize(test, configuration, output);
-        std::cout << "Wrote 14 benchmark JSON/log pairs for " << configuration.id
+        std::cout << "Wrote " << testCases.size() << " benchmark JSON/log pairs for " << configuration.id
             << " to " << output.string() << '\n';
         return 0;
     }
