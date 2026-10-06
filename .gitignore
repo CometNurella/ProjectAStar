@@ -33,6 +33,7 @@ bld/
 [Ll]og/
 [Ll]ogs/
 !/ProjectAStar/Benchmarks/results/APP1/E[123]/log/
+!/ProjectAStar/Benchmarks/results/JSON_input/E[123]/log/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
